@@ -6,11 +6,12 @@ import {
   FaInstagram,
 } from 'react-icons/fa'
 
+import image from './assets/img/hero/image00246.jpeg'
+
 export const navData = [
   { href: '/', name: 'home' },
   { href: '/', name: 'about' },
   { href: '/', name: 'team' },
-  { href: '/', name: 'testimonials' },
   { href: '/', name: 'book a table' },
   { href: '/', name: 'contact' },
 ]
@@ -24,20 +25,23 @@ export const heroData = {
 }
 
 export const socialData = [
-  { href: '/', icon: <FaEnvelope /> },
   { href: '/', icon: <FaWhatsapp /> },
-  { href: '/', icon: <FaFacebookF /> },
   { href: '/', icon: <FaInstagram /> },
 ]
 
-export const aboutData = {
-  pretitle: 'our story',
-  title: 'who we are',
-  subtitle:
-    'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet consequatur, quasi minima molestiae ex exercitationem culpa quisquam architecto quaerat, iusto dolores labore, sapiente magni rem commodi aperiam ad dolorem neque ducimus. Placeat vel non quod quis pariatur a aperiam, aliquam adipisci voluptatum voluptatem sit cupiditate dolore natus beatae earum omnis.',
-  btnText: 'find out more',
-  image:'',
-}
+export const locationData = [
+  {
+    title: 'Our beautiful outdoor area',
+    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus optio consequuntur corrupti quam, id at distinctio error recusandae inventore repudiandae!',
+    img: image,
+  },
+  {
+    title: 'Our coosy indoor atmosphere',
+    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus optio consequuntur corrupti quam, id at distinctio error recusandae inventore repudiandae!',
+    position: 'right',
+    img: image,
+  },
+]
 
 export const footerData = {
   contact: {

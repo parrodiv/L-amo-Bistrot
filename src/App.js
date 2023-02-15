@@ -1,14 +1,25 @@
-import Hero from "./components/Hero";
-import About from './components/About'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+
+import Header from './components/Navigation/Header'
 import Reservation from './components/Reservation'
-import Footer from './components/About'
+import Footer from './components/Footer'
 
 function App() {
   return (
-   <div className="bg-rosa-antico h-full bg-pattern bg-repeat max-w-[1800px] mx-auto overflow-hidden">
-    <Hero />
-   </div>
-  );
+    <>
+      <Router>
+        <div className='h-full max-w-full mx-auto overflow-hidden bg-repeat bg-pattern'>
+          <Header />
+          <Routes>
+            <Route path='/' index exact element={<Home />}></Route>
+          </Routes>
+          <Reservation />
+          <Footer />
+        </div>
+      </Router>
+    </>
+  )
 }
 
-export default App;
+export default App

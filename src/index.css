@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply font-secondary text-lg font-medium;
+    @apply font-primary text-lg font-medium;
   }
   .h1,
   .h2,
@@ -18,10 +18,10 @@
     @apply text-6xl lg:text-8xl font-bold text-white;
   }
   .h2 {
-    @apply font-black text-[46px] mb-4 leading-[1.1];
+    @apply font-black text-2xl mb-4 leading-[1.1] md:text-3xl;
   }
   .h3 {
-    @apply font-extrabold italic text-[40px];
+    @apply font-extrabold italic text-xl md:text-2xl;
   }
   .h4 {
     @apply font-extrabold italic text-[26px] text-white;

@@ -27,7 +27,7 @@ module.exports = {
       },
     },
     backgroundImage: {
-      pattern: '',
+      pattern: 'url(assets/img/bg/body-bg-pattern_5_optimized.png)',
       hero: 'url(assets/img/hero/image00246.jpeg)',
       footer: '',
     },

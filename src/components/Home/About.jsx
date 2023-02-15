@@ -3,7 +3,7 @@ import { locationData } from '../../data'
 
 const About = () => {
   return (
-    <section className='min-h-[400px] container flex flex-col items-center justify-center w-full h-full mx-auto'>
+    <section className='min-h-[480px] container flex flex-col items-center justify-center w-full h-full mx-auto'>
       <div className='text-center'>
         <h2 className='my-3 h3 md:h2'>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa quis

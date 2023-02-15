@@ -4,7 +4,7 @@ import { ExternalLink } from 'react-external-link'
 
 const Social = () => {
   return (
-    <div className='flex gap-x-[10px]'>
+    <div className='flex flex-col'>
       {socialData.map((item, index) => (
         <ExternalLink
           key={index}

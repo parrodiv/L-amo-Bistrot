@@ -3,6 +3,7 @@ import Social from '../Social'
 import Nav from './Nav'
 import MenuButton from './MenuButton'
 
+
 import logo from '../../assets/img/logo/logo.jpeg'
 
 //import motion
@@ -55,7 +56,6 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener('scroll', () => {
       window.scrollY > 50 ? setIsActive(true) : setIsActive(false)
-      console.log(window.scrollY)
     })
   }, [])
 
@@ -68,7 +68,7 @@ const Header = () => {
     >
       <div className='container mx-auto'>
         {/* menu button */}
-        <div className='relative flex items-center justify-between px-4 text-white lg:px-0'>
+        <div className='relative flex items-center justify-between px-4 text-white'>
           <div>
             <MenuButton nav={nav} setNav={setNav} />
           </div>
@@ -96,7 +96,7 @@ const Header = () => {
             animate={nav ? 'show' : ''}
             className='absolute bg-giallo-logo w-[310px] h-[50vh] left-0 top-[120px] z-50 rounded-lg shadow-xl'
           >
-            <Nav />
+            <Nav nav={nav} setNav={setNav}/>
           </motion.div>
         </div>
       </div>

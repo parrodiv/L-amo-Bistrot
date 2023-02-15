@@ -1,12 +1,14 @@
 import React from 'react'
-import Hero from '../components/Hero'
-import About from '../components/About/About'
+import Hero from '../components/Home/Hero'
+import About from '../components/Home/About'
+import BoxImages from '../components/Home/BoxImages'
 
 const Home = () => {
   return (
     <>
       <Hero />
       <About />
+      <BoxImages />
     </>
   )
 }

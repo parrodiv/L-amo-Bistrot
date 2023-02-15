@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Header from './components/Navigation/Header'
 import Reservation from './components/Reservation'
 import Footer from './components/Footer'
+import Food from './pages/Food'
 
 function App() {
   return (
@@ -13,8 +14,8 @@ function App() {
           <Header />
           <Routes>
             <Route path='/' index exact element={<Home />}></Route>
+            <Route path='/food' index exact element={<Food />}></Route>
           </Routes>
-          <Reservation />
           <Footer />
         </div>
       </Router>

@@ -21,7 +21,7 @@ module.exports = {
     extend: {
       colors: {
         'rosa-antico': '#d1cdc4',
-        'blu-logo': '#294072',
+        'blu-logo': '#2739a1',
         'giallo-logo': '#fac901',
         'azzurro-pesce': '#fac901'
       },

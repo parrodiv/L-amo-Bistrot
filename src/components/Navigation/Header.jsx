@@ -4,12 +4,16 @@ import Nav from './Nav'
 import MenuButton from './MenuButton'
 
 
+
 import logo from '../../assets/img/logo/logo.jpeg'
 
 //import motion
 import { motion } from 'framer-motion'
 // import variants
 import { staggerContainer, fadeIn } from '../../variants'
+import { Link } from 'react-router-dom'
+
+
 // header variants
 const headerVariants = {
   hidden: {
@@ -18,7 +22,6 @@ const headerVariants = {
   },
   show: {
     padding: '14px 0 14px 0',
-    background: 'rgba(209, 205, 196, 0.72)',
     transition: {
       type: 'spring',
     },
@@ -64,7 +67,7 @@ const Header = () => {
       variants={headerVariants}
       intial='hidden'
       animate={isActive ? 'show' : 'hidden'}
-      className='fixed top-0 z-50 w-full max-w-full py-3 bg-rosa-antico/20'
+      className='fixed top-0 z-50 w-full max-w-full py-3 bg-rosa-antico/80'
     >
       <div className='container mx-auto'>
         {/* menu button */}
@@ -74,17 +77,17 @@ const Header = () => {
           </div>
           {/* logo */}
           <div>
-            <a href='#'>
+            <Link to='/'>
               <img
                 className={
                   isActive
-                    ? 'w-[85px] h-[85px] rounded-full'
-                    : 'w-[107px] h-[107px] rounded-full'
+                    ? 'w-[60px] h-[60px] rounded-full lg:w-[80px] lg:h-[80px]'
+                    : 'w-[70px] h-[70px] rounded-full lg:w-[105px] lg:h-[105px]'
                 }
                 src={logo}
                 alt='logo'
               />
-            </a>
+            </Link>
           </div>
           {/* social */}
           <div>
@@ -94,9 +97,9 @@ const Header = () => {
             variants={navVariants}
             initial='hidden'
             animate={nav ? 'show' : ''}
-            className='absolute bg-giallo-logo w-[310px] h-[50vh] left-0 top-[120px] z-50 rounded-lg shadow-xl'
+            className='absolute bg-blu-logo w-[310px] h-[50vh] left-0 top-[120px] z-50 rounded-lg shadow-xl'
           >
-            <Nav nav={nav} setNav={setNav}/>
+            <Nav nav={nav} setNav={setNav} />
           </motion.div>
         </div>
       </div>

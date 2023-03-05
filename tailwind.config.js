@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     fontFamily: {
       primary: 'Playfair Display',
-      secondary: 'Lato',
+      secondary: 'Patua One',
+      three: 'Courgette'
     },
     container: {
       padding: {
@@ -20,16 +21,15 @@ module.exports = {
     },
     extend: {
       colors: {
-        'rosa-antico': '#d1cdc4',
+        'rosa-antico': '#edc6cd',
         'blu-logo': '#2739a1',
         'giallo-logo': '#fac901',
-        'azzurro-pesce': '#fac901'
+        'azzurro-pesce': '#fac901',
       },
     },
     backgroundImage: {
       pattern: 'url(assets/img/bg/body-bg-pattern_5_optimized.png)',
       hero: 'url(assets/img/hero/image00246.jpeg)',
-      footer: '',
     },
   },
   daisyui: {

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Patua+One&display=swap');
+
 @layer base {
   body {
     @apply font-primary text-lg font-medium;
@@ -33,9 +37,31 @@
     @apply font-secondary font-bold text-base uppercase tracking-[-0.04em] text-accent mb-2;
   }
   .btnCustom {
-    @apply h-14 rounded-full bg-giallo-logo px-[42px] text-white text-base font-secondary font-semibold  hover:bg-white hover:text-black transition-all duration-300 flex justify-center items-center;
+    @apply h-14 rounded-full bg-blu-logo px-[42px] text-white text-base font-secondary font-semibold  hover:bg-white hover:text-black transition-all duration-300 flex justify-center items-center;
   }
   .input {
     @apply h-[56px] w-[316px] outline-none pl-[30px] rounded-full border-2 border-gray-200 font-secondary font-semibold text-base;
   }
 }
+
+/* disable buttons in react slide show */
+.react-slideshow-container > button {
+  display: none !important;
+}
+
+.leaflet-container {
+  /* width: 100%;
+  height: 100%; */
+  margin: 10px 10px;
+}
+
+.leaflet-control-attribution {
+  display: none;
+}
+
+/* {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */

@@ -5,6 +5,10 @@ import Header from './components/Navigation/Header'
 import Reservation from './components/Reservation'
 import Footer from './components/Footer'
 import Food from './pages/Food'
+import Drink from './pages/Drink'
+import Contact from './pages/Contact'
+
+
 
 function App() {
   return (
@@ -15,6 +19,8 @@ function App() {
           <Routes>
             <Route path='/' index exact element={<Home />}></Route>
             <Route path='/food' index exact element={<Food />}></Route>
+            <Route path='/drink' index exact element={<Drink />}></Route>
+            <Route path='/contact' index exact element={<Contact />}></Route>
           </Routes>
           <Footer />
         </div>

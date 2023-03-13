@@ -5,6 +5,8 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import 'react-slideshow-image/dist/styles.css'
+import setupLocatorUI from '@locator/runtime'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

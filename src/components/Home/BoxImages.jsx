@@ -1,14 +1,19 @@
-import React from 'react'
+import Aos from 'aos'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import { boxImagesHomeData } from '../../data'
 
 const BoxImages = () => {
+  useEffect(() => {
+    Aos.init({duration: 1500})
+  }, [])
+
   return (
     <div className='grid w-full grid-cols-1 gap-0 mx-auto lg:grid-cols-3'>
       {boxImagesHomeData.map((dataBox, index) => {
         return dataBox.hasOwnProperty('img') ? (
-          <div key={index} classname='w-full rounded'>
+          <div data-aos='flip-down' key={index} classname='w-full rounded'>
             <img
               src={dataBox.img}
               className='object-cover lg:max-h-[250px] max-h-[300px] w-full'
@@ -17,9 +22,10 @@ const BoxImages = () => {
           </div>
         ) : (
           <Link
+            data-aos='flip-up'
             key={index}
             to={dataBox.link}
-            className='flex flex-col items-center justify-center w-full text-white transition-all rounded bg-blu-logo hover:scale-105 hover:opacity-80 min-h-[200px]'
+            className='flex flex-col items-center justify-center w-full text-white transition-all rounded bg-blu-logo/90 hover:scale-105 min-h-[200px]'
           >
             <h2 className='h2'>{dataBox.title}</h2>
             <p className='underline'>{dataBox.text}</p>

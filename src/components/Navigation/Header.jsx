@@ -67,7 +67,7 @@ const Header = () => {
       variants={headerVariants}
       intial='hidden'
       animate={isActive ? 'show' : 'hidden'}
-      className='fixed top-0 z-50 w-full max-w-full py-3 bg-rosa-antico/80'
+      className='fixed top-0 z-50 w-full max-w-full py-3 bg-rosa-antico/80 h-[100px]'
     >
       <div className='container mx-auto'>
         {/* menu button */}
@@ -81,7 +81,7 @@ const Header = () => {
               <img
                 className={
                   isActive
-                    ? 'w-[60px] h-[60px] rounded-full lg:w-[80px] lg:h-[80px]'
+                    ? 'hidden'
                     : 'w-[70px] h-[70px] rounded-full lg:w-[105px] lg:h-[105px]'
                 }
                 src={logo}
@@ -97,7 +97,7 @@ const Header = () => {
             variants={navVariants}
             initial='hidden'
             animate={nav ? 'show' : ''}
-            className='absolute bg-blu-logo w-[310px] h-[50vh] left-0 top-[120px] z-50 rounded-lg shadow-xl'
+            className='absolute bg-blu-logo/80 w-[310px] h-[50vh] left-0 top-[120px] z-50 rounded-lg shadow-xl'
           >
             <Nav nav={nav} setNav={setNav} />
           </motion.div>

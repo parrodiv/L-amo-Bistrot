@@ -8,7 +8,7 @@ const Map = () => {
       center={position}
       zoom={13}
       scrollWheelZoom={false}
-      className='rounded-[10%] shadow-xl min-w-[350px] min-h-[350px] z-0'
+      className='rounded-[10%] shadow-xl min-w-[350px] min-h-[350px] z-0 animate__animated animate__fadeInLeft'
     >
       <TileLayer
         attribution='&copy; '

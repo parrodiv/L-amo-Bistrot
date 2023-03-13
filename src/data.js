@@ -6,6 +6,9 @@ import locationImg from './assets/img/boxImagesHome/location.jpeg'
 import foodImg from './assets/img/boxImagesHome/food.jpeg'
 import drinkImg from './assets/img/boxImagesHome/drinks.jpeg'
 
+// Bistrot logo senza background
+import bistrotHero from './assets/img/hero/bistrot.png'
+
 // Food Images
 import foodImg1 from './assets/img/foodPage/image00007_optimized.jpeg'
 import foodImg2 from './assets/img/foodPage/image00012_optimized.jpeg'
@@ -16,7 +19,7 @@ import foodImg6 from './assets/img/foodPage/image00039_optimized.jpeg'
 import foodImg7 from './assets/img/foodPage/image00040_1_optimized.jpeg'
 import foodImg8 from './assets/img/foodPage/image00040_optimized.jpeg'
 import foodImg9 from './assets/img/foodPage/image00134_optimized.jpeg'
-import foodImg10 from './assets/img/foodPage/image00141_optimized.jpeg'
+import foodImg10 from './assets/img/foodPage/image00094_optimized.jpeg'
 import foodImg11 from './assets/img/foodPage/image00142_optimized.jpeg'
 import foodImg12 from './assets/img/foodPage/image00144_optimized.jpeg'
 import foodImg13 from './assets/img/foodPage/image00145_optimized.jpeg'
@@ -25,6 +28,8 @@ import foodImg15 from './assets/img/foodPage/image00206_optimized.jpeg'
 import foodImg16 from './assets/img/foodPage/image00207_optimized.jpeg'
 import foodImg17 from './assets/img/foodPage/image00208_optimized.jpeg'
 import foodImg18 from './assets/img/foodPage/image00209_optimized.jpeg'
+import foodImg19 from './assets/img/foodPage/image00114_optimized.jpeg'
+import foodImg20 from './assets/img/foodPage/image00116_optimized.jpeg'
 
 // Drink Images
 import drinkImg1 from './assets/img/drinkPage/image00170_optimized.jpeg'
@@ -37,11 +42,12 @@ import drinkImg9 from './assets/img/drinkPage/image00198_optimized.jpeg'
 import drinkImg10 from './assets/img/drinkPage/image00223_optimized.jpeg'
 
 // Hero Imgs
-import heroImg1 from './assets/img/hero/image00054_optimized.jpeg'
-import heroImg2 from './assets/img/hero/image00055_optimized.jpeg'
-import heroImg3 from './assets/img/hero/image00161_optimized.jpeg'
-import heroImg4 from './assets/img/hero/image00180_optimized.jpeg'
-import heroImg5 from './assets/img/hero/image00225_optimized.jpeg'
+import heroImg6 from './assets/img/hero/image00235_1_optimized.jpeg'
+import heroImg2 from './assets/img/hero/image00054_optimized.jpeg'
+import heroImg3 from './assets/img/hero/image00055_optimized.jpeg'
+import heroImg4 from './assets/img/hero/image00161_optimized.jpeg'
+import heroImg5 from './assets/img/hero/image00180_optimized.jpeg'
+import heroImg1 from './assets/img/hero/image00225_optimized.jpeg'
 
 export const navData = [
   { href: '/', name: 'home' },
@@ -51,9 +57,7 @@ export const navData = [
 ]
 
 export const heroData = {
-  title: "L'amo Bistrot",
-  subtitle: 'Amare è mangiare insieme',
-  btnText: 'Prenota un tavolo',
+  img: bistrotHero,
 }
 
 export const aboutData = {
@@ -76,19 +80,6 @@ export const socialData = [
   { href: 'https://www.instagram.com/lamobistrot/', icon: <FaInstagram /> },
 ]
 
-export const locationData = [
-  {
-    title: 'Our beautiful outdoor area',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus optio consequuntur corrupti quam, id at distinctio error recusandae inventore repudiandae!',
-    // img: image,
-  },
-  {
-    title: 'Our coosy indoor atmosphere',
-    text: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Delectus optio consequuntur corrupti quam, id at distinctio error recusandae inventore repudiandae!',
-    position: 'right',
-    // img: image,
-  },
-]
 
 export default [
   foodImg1,
@@ -109,6 +100,8 @@ export default [
   foodImg16,
   foodImg17,
   foodImg18,
+  foodImg19,
+  foodImg20,
 ]
 
 export const drinkImgs = [
@@ -122,7 +115,7 @@ export const drinkImgs = [
   drinkImg10,
 ]
 
-export const heroImgs = [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5]
+export const heroImgs = [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5, heroImg6]
 
 export const boxImagesHomeData = [
   {
@@ -134,15 +127,16 @@ export const boxImagesHomeData = [
     link: '/food',
   },
   {
-    img: drinkImg,
+    img: locationImg,
   },
+
   {
     title: 'CONTACT',
     text: 'Scopri di più',
     link: '/contact',
   },
   {
-    img: locationImg,
+    img: drinkImg,
   },
   {
     title: 'DRINK',

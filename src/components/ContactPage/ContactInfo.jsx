@@ -3,9 +3,9 @@ import Map from './Map'
 
 const ContactInfo = () => {
   return (
-    <section className='text-white flex flex-col lg:flex-row justify-around items-center mx-auto w-full p-8 '>
+    <section className='flex flex-col items-center justify-around w-full p-8 mx-auto text-white lg:flex-row '>
       <Map attributionControl={false} />
-      <div className='flex flex-col items-center justify-center '>
+      <div className='flex flex-col items-center justify-center animate__animated animate__fadeInRight'>
         <h3 className='my-3 h3'>L'AMO BISTROT</h3>
         <p>Piazza Nazario Sauro, 29, 25084 Gargnano BS</p>
 

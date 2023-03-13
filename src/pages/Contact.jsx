@@ -4,7 +4,18 @@ import Reservation from '../components/ContactPage/Reservation'
 
 const Contact = () => {
   useEffect(() => {
-    window.scrollTo(0, 0)
+    const href = window.location.href.substring(
+      window.location.href.lastIndexOf('#') + 1
+    )
+    console.log(window.location.href)
+    console.log(window.location.href.lastIndexOf('#') + 1)
+    console.log(href)
+    const element = document.getElementById(href)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      window.scrollTo(0, 0)
+    }
   }, [])
   return (
     <>

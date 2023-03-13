@@ -1,8 +1,13 @@
-import React from 'react'
+import Aos from 'aos'
+import React, { useEffect } from 'react'
 
 const Reservation = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000})
+  }, [])
+ 
   return (
-    <section className='min-h-[480px] container flex flex-col items-center justify-center w-full h-full mx-auto my-5'>
+    <section data-aos="flip-right" id='reservation' className='min-h-[480px] container flex flex-col items-center justify-center w-full h-full mx-auto my-5 py-[80px]'>
       <h1 className='h2 text-dark'> Prenota un tavolo</h1>
       <form className='text-center'>
         <form>
@@ -13,7 +18,7 @@ const Reservation = () => {
                   for='fName'
                   class='mb-3 block text-base font-medium text-[#07074D]'
                 >
-                  First Name
+                  Nome
                 </label>
                 <input
                   type='text'
@@ -30,7 +35,7 @@ const Reservation = () => {
                   for='lName'
                   class='mb-3 block text-base font-medium text-[#07074D]'
                 >
-                  Last Name
+                  Cognome
                 </label>
                 <input
                   type='text'
@@ -62,7 +67,7 @@ const Reservation = () => {
               for='guest'
               class='mb-3 block text-base font-medium text-[#07074D]'
             >
-              How many guest are you bringing?
+              Quante persone?
             </label>
             <input
               type='number'
@@ -81,7 +86,7 @@ const Reservation = () => {
                   for='date'
                   class='mb-3 block text-base font-medium text-[#07074D]'
                 >
-                  Date
+                  Data
                 </label>
                 <input
                   type='date'
@@ -97,7 +102,7 @@ const Reservation = () => {
                   for='time'
                   class='mb-3 block text-base font-medium text-[#07074D]'
                 >
-                  Time
+                  Orario
                 </label>
                 <input
                   type='time'
@@ -109,8 +114,8 @@ const Reservation = () => {
             </div>
           </div>
           <div>
-            <button class='hover:shadow-form rounded-md bg-giallo-logo py-3 px-8 text-center text-base font-semibold text-white outline-none'>
-              Submit
+            <button class='hover:shadow-form rounded-md bg-blu-logo py-3 px-8 text-center text-base font-semibold text-white outline-none'>
+              Prenota
             </button>
           </div>
         </form>

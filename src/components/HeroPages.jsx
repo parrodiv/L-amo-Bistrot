@@ -20,7 +20,7 @@ const HeroPages = ({ page }) => {
         style={{ ...style }}
         className={
           page === 'food'
-            ? 'min-h-[50vh]  relative flex flex-col justify-center items-center'
+            ? 'min-h-[50vh]  relative flex flex-col justify-center items-center animate__animated animate__fadeIn'
             : page === 'drink'
             ? 'min-h-[50vh]  h-full relative flex flex-col justify-center items-center'
             : 'min-h-[100vh] relative flex flex-col justify-center items-center'

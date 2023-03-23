@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import { useTranslation } from 'react-i18next'
 
 const TextFragment = ({
   page,
@@ -14,6 +15,8 @@ const TextFragment = ({
     Aos.init({ duration: 1000 })
   }, [])
 
+  const { t } = useTranslation()
+
   return (
     <>
       {page === 'food' ? (
@@ -22,7 +25,7 @@ const TextFragment = ({
           className='min-h-[280px] container flex flex-col items-center justify-center w-full h-full mx-auto'
         >
           <div className='text-center'>
-            <h2 className='my-3 h3 md:h2'>{titleFood}</h2>
+            <h2 className='my-3 h3 md:h2'>{t('fragment_food')}</h2>
           </div>
         </section>
       ) : page === 'drink' ? (
@@ -31,7 +34,7 @@ const TextFragment = ({
           className='min-h-[280px] container flex flex-col items-center justify-center w-full h-full mx-auto'
         >
           <div className='text-center'>
-            <h2 className='my-3 h3 md:h2'>{titleDrink}</h2>
+            <h2 className='my-3 h3 md:h2'>{t('fragment_drink')}</h2>
           </div>
         </section>
       ) : (
@@ -40,9 +43,11 @@ const TextFragment = ({
           className='min-h-[480px] container flex flex-col items-center justify-center w-full h-full mx-auto'
         >
           <div className='text-center' data-aos='fade-in-up'>
-            <h2 className='my-3 h3 md:h2'>{title}</h2>
-            {title1_2 && <h2 className='my-3 h3 md:h2'>{title1_2}</h2>}
-            <p className='leading-8 font-secondary'>{text}</p>
+            <h2 className='my-3 h3 md:h2'>{t('about_title1')}</h2>
+            {title1_2 && (
+              <h2 className='my-3 h3 md:h2'>{t('about_title1_2')}</h2>
+            )}
+            <p className='leading-8 font-secondary'>{t('text1')}</p>
           </div>
         </section>
       )}

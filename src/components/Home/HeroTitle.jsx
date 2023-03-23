@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { heroData } from '../../data'
+import { useTranslation } from 'react-i18next'
 
 
 const HeroTitle = () => {
+
+  const { t } = useTranslation()
   return (
     <div
       id='titolo'
@@ -17,7 +20,7 @@ const HeroTitle = () => {
         <div>
           <Link to='contact/#reservation'>
             <button className='btnCustom animate__animated animate__heartBeat animate__delay-1s'>
-              Prenota un tavolo
+              {t("prenota_un_tavolo")}
             </button>
           </Link>
         </div>

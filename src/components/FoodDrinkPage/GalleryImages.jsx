@@ -19,7 +19,7 @@ const GalleryImages = ({ page }) => {
         <Gallery>
           {page === 'food'
             ? foodImgs.map((src) => (
-                <Item original={src} thumbnail={src} width='1000' height='650'>
+                <Item original={src} thumbnail={src} width='1000' height='700'>
                   {({ ref, open }) => (
                     <img
                       data-aos='fade-up'
@@ -27,7 +27,7 @@ const GalleryImages = ({ page }) => {
                       ref={ref}
                       onClick={open}
                       src={src}
-                      className='min-w-[20rem] max-h-[17rem] w-full h-full'
+                      className='w-[15rem] h-[10rem] md:min-w-[20rem] md:max-h-[17rem] md:w-full md:h-full object-cover'
                     />
                   )}
                 </Item>

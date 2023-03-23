@@ -6,6 +6,9 @@ import TextFragment from './Layout/TextFragment'
 import foodBg from '../assets/img/boxImagesHome/food.jpeg'
 import drinkBg from '../assets/img/boxImagesHome/drinks.jpeg'
 import contactBg from '../assets/img/boxImagesHome/contact.jpeg'
+import { useTranslation } from 'react-i18next'
+
+import { textFragments } from '../data'
 
 const HeroPages = ({ page }) => {
   const style = {
@@ -14,6 +17,9 @@ const HeroPages = ({ page }) => {
     })center center`,
     backgroundSize: 'cover',
   }
+
+  const { t } = useTranslation()
+
   return (
     <>
       <div
@@ -22,8 +28,8 @@ const HeroPages = ({ page }) => {
           page === 'food'
             ? 'min-h-[50vh]  relative flex flex-col justify-center items-center animate__animated animate__fadeIn'
             : page === 'drink'
-            ? 'min-h-[50vh]  h-full relative flex flex-col justify-center items-center'
-            : 'min-h-[100vh] relative flex flex-col justify-center items-center'
+            ? 'min-h-[50vh]  h-full relative flex flex-col justify-center items-center animate__animated animate__fadeIn'
+            : 'min-h-[100vh] relative flex flex-col justify-center items-center animate__animated animate__fadeIn'
         }
       >
         {' '}
@@ -44,8 +50,8 @@ const HeroPages = ({ page }) => {
         <>
           <TextFragment
             page={page}
-            titleFood='E’ una storia d’amore la cucina. Bisogna innamorarsi dei prodotti e poi delle persone che li cucinano'
-            titleDrink='Il suono morbido di un sughero che viene stappato dalla bottiglia ha il suono di un uomo che sta aprendo il suo cuore.'
+            titleFood={textFragments.food}
+            titleDrink={textFragments.drink}
           />
           <GalleryImages page={page} />
         </>

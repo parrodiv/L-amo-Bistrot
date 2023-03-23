@@ -49,6 +49,10 @@ import heroImg4 from './assets/img/hero/image00161_optimized.jpeg'
 import heroImg5 from './assets/img/hero/image00180_optimized.jpeg'
 import heroImg1 from './assets/img/hero/image00225_optimized.jpeg'
 
+
+import { useTranslation } from 'react-i18next'
+
+
 export const navData = [
   { href: '/', name: 'home' },
   { href: '/food', name: 'food' },
@@ -144,3 +148,29 @@ export const boxImagesHomeData = [
     link: '/drink',
   },
 ]
+
+export const textFragments = 
+  {
+    food: 'E’ una storia d’amore la cucina. Bisogna innamorarsi dei prodotti e poi delle persone che li cucinano.',
+    drink:
+      'Il suono morbido di un sughero che viene stappato dalla bottiglia ha il suono di un uomo che sta aprendo il suo cuore.',
+  }
+
+  
+export const contactInfo = {
+  orari: "ORARI",
+  text1: 'Da Mercoledi a Lunedi dalle 11:00 alle 14:00',
+  text2: 'e dalle 18:00 alle 22:00',
+  text3: 'Martedì chiuso',
+}
+
+export const prenotazione = {
+  nome: "Nome",
+  cognome: "Cognome",
+  telefono: "Telefono",
+  persone: "Quante persone?",
+  data: "Data",
+  orario: "Orario",
+  prenota: "Prenota"
+}
+

@@ -1,8 +1,13 @@
 import i18next from 'i18next'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import Cookies from 'js-cookie'
 
 const SelectLang = () => {
-  useEffect(() => {}, [])
+ 
+   const [selectedLang, setSelectedLang] = useState(
+     Cookies.get('i18next')
+   )
+
 
   const languages = [
     {
@@ -31,7 +36,7 @@ const SelectLang = () => {
       onChange={(e) => i18next.changeLanguage(e.target.value)}
     >
       {languages.map(({ code, name, icon }, index) => (
-        <option key={index} value={code} className='text-center'>
+        <option key={index} value={code} className='text-center' selected={selectedLang == code && true}>
           {icon} {name}
         </option>
       ))}
@@ -39,7 +44,5 @@ const SelectLang = () => {
   )
 }
 
-{
-}
 
 export default SelectLang

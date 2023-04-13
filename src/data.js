@@ -3,18 +3,18 @@ import { FaWhatsapp, FaFacebookF, FaInstagram } from 'react-icons/fa'
 
 // Home Images
 import locationImg from './assets/img/boxImagesHome/location.jpeg'
-import foodImg from './assets/img/boxImagesHome/food.jpeg'
-import drinkImg from './assets/img/boxImagesHome/drinks.jpeg'
+import foodImg from './assets/img/foodPage/image00140_optimized.jpeg'
+import drinkImg from './assets/img/drinkPage/photo_2023-03-25_15-59-07_optimized.jpg'
 
 // Bistrot logo senza background
 import bistrotHero from './assets/img/hero/bistrot.png'
 
 // Food Images
 import foodImg1 from './assets/img/foodPage/image00007_optimized.jpeg'
-import foodImg2 from './assets/img/foodPage/image00012_optimized.jpeg'
+import foodImg2 from './assets/img/foodPage/photo_2023-03-25_14-43-00.jpg'
 import foodImg3 from './assets/img/foodPage/image00020_optimized.jpeg'
 import foodImg4 from './assets/img/foodPage/image00032_optimized.jpeg'
-import foodImg5 from './assets/img/foodPage/image00039_1_optimized.jpeg'
+import foodImg5 from './assets/img/foodPage/photo_2023-03-25_14-42-18.jpg'
 import foodImg6 from './assets/img/foodPage/image00039_optimized.jpeg'
 import foodImg7 from './assets/img/foodPage/image00040_1_optimized.jpeg'
 import foodImg8 from './assets/img/foodPage/image00040_optimized.jpeg'
@@ -23,12 +23,12 @@ import foodImg10 from './assets/img/foodPage/image00094_optimized.jpeg'
 import foodImg11 from './assets/img/foodPage/image00142_optimized.jpeg'
 import foodImg12 from './assets/img/foodPage/image00144_optimized.jpeg'
 import foodImg13 from './assets/img/foodPage/image00145_optimized.jpeg'
-import foodImg14 from './assets/img/foodPage/image00203_optimized.jpeg'
-import foodImg15 from './assets/img/foodPage/image00206_optimized.jpeg'
-import foodImg16 from './assets/img/foodPage/image00207_optimized.jpeg'
-import foodImg17 from './assets/img/foodPage/image00208_optimized.jpeg'
-import foodImg18 from './assets/img/foodPage/image00209_optimized.jpeg'
-import foodImg19 from './assets/img/foodPage/image00114_optimized.jpeg'
+import foodImg14 from './assets/img/foodPage/photo_2023-03-25_14-38-34.jpg'
+import foodImg15 from './assets/img/foodPage/photo_2023-03-25_14-38-33.jpg'
+import foodImg16 from './assets/img/foodPage/photo_2023-04-06_12-04-39_optimized.jpg'
+import foodImg17 from './assets/img/foodPage/photo_2023-03-25_14-38-32.jpg'
+import foodImg18 from './assets/img/foodPage/photo_2023-03-25_14-38-30.jpg'
+import foodImg19 from './assets/img/foodPage/photo_2023-03-25_14-38-29.jpg'
 import foodImg20 from './assets/img/foodPage/image00116_optimized.jpeg'
 
 // Drink Images
@@ -40,13 +40,16 @@ import drinkImg7 from './assets/img/drinkPage/image00197_optimized.jpeg'
 import drinkImg8 from './assets/img/drinkPage/image00198_1_optimized.jpeg'
 import drinkImg9 from './assets/img/drinkPage/image00198_optimized.jpeg'
 import drinkImg10 from './assets/img/drinkPage/image00223_optimized.jpeg'
+import drinkImg11 from './assets/img/drinkPage/image00015_optimized.jpeg'
+import drinkImg12 from './assets/img/drinkPage/image00090_optimized.jpeg'
+import drinkImg13 from './assets/img/drinkPage/image00201_optimized.jpeg'
+import drinkImg14 from './assets/img/drinkPage/image00190_optimized.jpeg'
+
 
 // Hero Imgs
 import heroImg6 from './assets/img/hero/image00235_1_optimized.jpeg'
 import heroImg2 from './assets/img/hero/image00054_optimized.jpeg'
-import heroImg3 from './assets/img/hero/image00055_optimized.jpeg'
 import heroImg4 from './assets/img/hero/image00161_optimized.jpeg'
-import heroImg5 from './assets/img/hero/image00180_optimized.jpeg'
 import heroImg1 from './assets/img/hero/image00225_optimized.jpeg'
 
 
@@ -117,9 +120,13 @@ export const drinkImgs = [
   drinkImg8,
   drinkImg9,
   drinkImg10,
+  drinkImg11,
+  drinkImg12,
+  drinkImg13,
+  drinkImg14,
 ]
 
-export const heroImgs = [heroImg1, heroImg2, heroImg3, heroImg4, heroImg5, heroImg6]
+export const heroImgs = [heroImg1, heroImg2, heroImg4, heroImg6]
 
 export const boxImagesHomeData = [
   {

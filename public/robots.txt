@@ -1,8 +1,8 @@
 # https://www.robotstxt.org/robotstxt.html
-Sitemap: https://www.lamobistrot.it/sitemap.xml
+Sitemap: https://lamobistrot.it/sitemap.xml
 User-agent: *
-Allow:/ 
-Allow:/food
-Allow:/drink
-Allow:/contact
-Disallow:
+Allow: https://lamobistrot.it 
+Allow: https://lamobistrot.it/food
+Allow: https://lamobistrot.it/drink
+Allow: https://lamobistrot.it/contact
+Disallow: https://www.lamobistrot.it

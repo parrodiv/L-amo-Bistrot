@@ -15,7 +15,7 @@ const GalleryImages = ({ page }) => {
 
   return (
     <div>
-      <div className='grid grid-cols-2 lg:grid-cols-4'>
+      <div className='grid grid-cols-2 mx-auto md:grid-cols-3 lg:grid-cols-4'>
         <Gallery>
           {page === 'food'
             ? foodImgs.map((src) => (
@@ -27,7 +27,8 @@ const GalleryImages = ({ page }) => {
                       ref={ref}
                       onClick={open}
                       src={src}
-                      className='w-[15rem] h-[10rem] md:min-w-[20rem] md:max-h-[17rem] md:w-full md:h-full object-cover'
+                      className='w-[15rem] h-[10rem] md:w-[22rem] md:h-[17rem] object-cover mx-auto'
+                      alt="L'Amo Bistrot"
                     />
                   )}
                 </Item>
@@ -42,6 +43,7 @@ const GalleryImages = ({ page }) => {
                       onClick={open}
                       src={src}
                       className='min-w-[100px] min-h-[50px] w-full h-full'
+                      alt="L'Amo Bistrot"
                     />
                   )}
                 </Item>

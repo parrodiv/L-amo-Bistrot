@@ -12,6 +12,7 @@ const HeroTitle = () => {
       id='titolo'
       className='absolute top-0 z-40 flex items-center justify-center w-full min-h-screen mx-auto text-white '
     >
+      <h1 className='hidden'>L'Amo Bistrot a Gargnano</h1>
       {/* Text */}
       <div className='flex flex-col items-center text-center animate__animated animate__backInDown'>
         <div>

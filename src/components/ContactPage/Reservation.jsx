@@ -2,12 +2,11 @@ import Aos from 'aos'
 import React, { useEffect, useState, useRef } from 'react'
 import emailjs from '@emailjs/browser'
 
-import { prenotazione } from '../../data'
 import { useTranslation } from 'react-i18next'
 import { FaExclamationCircle } from 'react-icons/fa'
 import { toast } from 'react-toastify'
 import { useNavigate } from 'react-router-dom'
-
+import i18n from '../../i18n'
 
 
 
@@ -25,15 +24,22 @@ const Reservation = () => {
     Aos.init({ duration: 1000 })
   }, [])
 
+   console.log(
+     'Loading translation file:',
+     i18n.services.backendConnector.backend.options.loadPath
+   )
+
+
+  const { t } = useTranslation('translation')
+
+
   const [formData, setFormData] = useState(initialState)
   const form = useRef()
+  const navigate = useNavigate()
 
   const { nome, cognome, guest, number, date } = formData
 
-  const navigate = useNavigate()
-
   const onMutate = (e) => {
-    console.log(e.target.value)
     setFormData((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
@@ -57,14 +63,14 @@ const Reservation = () => {
 
   const onSubmit = (e) => {
     e.preventDefault()
-    // sendEmail()
+    sendEmail()
     toast.success('Richiesta andata a buon fine! Attendere nostra conferma grazie')
-    console.log('inviato')
     navigate('/')
   }
 
-  const { t } = useTranslation()
+  
 
+ 
   return (
     <section
       data-aos='flip-right'

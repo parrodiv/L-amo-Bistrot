@@ -3,9 +3,9 @@ import GalleryImages from './FoodDrinkPage/GalleryImages'
 import ContactInfo from './ContactPage/ContactInfo'
 import TextFragment from './Layout/TextFragment'
 
-import foodBg from '../assets/img/boxImagesHome/food.jpeg'
-import drinkBg from '../assets/img/boxImagesHome/drinks.jpeg'
-import contactBg from '../assets/img/boxImagesHome/contact.jpeg'
+import foodBg from '../assets/img/foodPage/image00140_optimized.jpeg'
+import drinkBg from '../assets/img/drinkPage/photo_2023-03-25_15-59-07_optimized.jpg'
+import contactBg from '../assets/img/boxImagesHome/location.jpeg'
 import { useTranslation } from 'react-i18next'
 
 import { textFragments } from '../data'
@@ -50,8 +50,8 @@ const HeroPages = ({ page }) => {
         <>
           <TextFragment
             page={page}
-            titleFood={textFragments.food}
-            titleDrink={textFragments.drink}
+            textFood={t('fragment_food')}
+            textDrink={t('fragment_drink')}
           />
           <GalleryImages page={page} />
         </>

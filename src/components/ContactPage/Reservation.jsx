@@ -17,6 +17,7 @@ const initialState = {
   number: '',
   date: '',
   time: '',
+  email: '',
 }
 
 const Reservation = () => {
@@ -24,10 +25,10 @@ const Reservation = () => {
     Aos.init({ duration: 1000 })
   }, [])
 
-   console.log(
-     'Loading translation file:',
-     i18n.services.backendConnector.backend.options.loadPath
-   )
+  //  console.log(
+  //    'Loading translation file:',
+  //    i18n.services.backendConnector.backend.options.loadPath
+  //  )
 
 
   const { t } = useTranslation('translation')
@@ -37,7 +38,7 @@ const Reservation = () => {
   const form = useRef()
   const navigate = useNavigate()
 
-  const { nome, cognome, guest, number, date } = formData
+  const { nome, cognome, guest, number, date, email } = formData
 
   const onMutate = (e) => {
     setFormData((prevState) => ({
@@ -77,7 +78,7 @@ const Reservation = () => {
       id='reservation'
       className='min-h-[480px] container flex flex-col items-center justify-center w-full h-full mx-auto my-5 py-[80px]'
     >
-      <h1 className='h2 text-dark'> {t("prenota_un_tavolo")}</h1>
+      <h1 className='h2 text-dark'> {t('prenota_un_tavolo')}</h1>
       <form ref={form} className='text-center' onSubmit={(e) => onSubmit(e)}>
         <div className='flex flex-wrap -mx-3'>
           <div className='w-full px-3 sm:w-1/2'>
@@ -121,6 +122,24 @@ const Reservation = () => {
             </div>
           </div>
         </div>
+        <div className='mb-5'>
+          <label
+            htmlFor='email'
+            className='mb-3 block text-base font-medium text-[#07074D]'
+          >
+            {t('email')}
+          </label>
+          <input
+            type='email'
+            name='email'
+            id='email'
+            placeholder='example@example.com'
+            onChange={onMutate}
+            value={email}
+            className='w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md'
+            required
+          />
+        </div>
         <div class='mb-5'>
           <label
             for='number'
@@ -153,7 +172,7 @@ const Reservation = () => {
             placeholder='5'
             value={guest}
             onChange={onMutate}
-            min='0'
+            min='1'
             className='w-full appearance-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md'
             required
           />
@@ -199,7 +218,7 @@ const Reservation = () => {
           </div>
         </div>
         <div className='flex flex-col items-center justify-between mb-4'>
-          <FaExclamationCircle size={30}/> {t('informativa')}
+          <FaExclamationCircle size={30} /> {t('informativa')}
         </div>
         <button
           type='submit'

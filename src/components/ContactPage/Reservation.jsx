@@ -40,7 +40,27 @@ const Reservation = () => {
 
   const { nome, cognome, guest, number, date, email } = formData
 
+  const isWednesday = (dateString) => {
+    const selectedDate = new Date(dateString)
+    // getDay() returns the day of the week as a number (0-6)
+    if (selectedDate.getDay() === 3) {
+      toast.error(t('messaggio_chiusura'))
+      return true
+    }
+    return false
+  }
+
   const onMutate = (e) => {
+    if (e.target.name === 'date') {
+      if (isWednesday(e.target.value)) {
+        setFormData((prevState) => ({
+          ...prevState,
+          date: '',
+        }))
+        return
+      }
+    }
+
     setFormData((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
@@ -193,6 +213,7 @@ const Reservation = () => {
                 id='date'
                 value={date}
                 onChange={onMutate}
+                onBlur={(e) => isWednesday(e.target.value)}
                 className='w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md'
                 required
               />

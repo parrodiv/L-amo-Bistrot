@@ -24,5 +24,6 @@
   "orario": "Time",
   "prenota": "Send request",
   "scopri_di_piu": "Find out more",
-  "informativa": "We inform our kind customers that this is a booking REQUEST and that it must be confirmed by us via email or call"
+  "informativa": "We inform our kind customers that this is a booking REQUEST and that it must be confirmed by us via email or call",
+    "messaggio_chiusura": "Wednesday is our closing day, please choose another day for your reservation"
 }

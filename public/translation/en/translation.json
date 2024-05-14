@@ -25,5 +25,7 @@
   "prenota": "Send request",
   "scopri_di_piu": "Find out more",
   "informativa": "We inform our kind customers that this is a booking REQUEST and that it must be confirmed by us via email or call",
-    "messaggio_chiusura": "Wednesday is our closing day, please choose another day for your reservation"
+  "messaggio_chiusura": "Wednesday is our closing day, please choose another day for your reservation",
+  "messaggio_chiusura_ferie": " We apologize for the inconvenience, but the restaurant is closed for holidays until March 27th",
+  "messaggio_chiusura_ferie2": " We apologize for the inconvenience, but the restaurant is closed for holidays from October 14th"
 }

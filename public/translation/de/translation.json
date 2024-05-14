@@ -25,5 +25,7 @@
   "prenota": "Anfrage absenden",
   "scopri_di_piu": "Finde mehr heraus",
   "informativa": "Wir informieren unsere freundlichen Kunden, dass dies eine Buchungsanfrage ist und von uns per E-Mail oder Anruf bestätigt werden muss",
-  "messaggio_chiusura": "Mittwoch ist unser Ruhetag, bitte wählen Sie einen anderen Tag für Ihre Reservierung"
+  "messaggio_chiusura": "Mittwoch ist unser Ruhetag, bitte wählen Sie einen anderen Tag für Ihre Reservierung",
+  "messaggio_chiusura_ferie": " Wir entschuldigen uns für die Unannehmlichkeiten, aber das Restaurant ist bis zum 27. März geschlossen",
+  "messaggio_chiusura_ferie2": "Wir entschuldigen uns für die Unannehmlichkeiten, aber das Restaurant ist ab dem 14. Oktober wegen Feiertagen geschlossen"
 }

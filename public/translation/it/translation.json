@@ -27,5 +27,7 @@
   "informativa": "Si avvisa la gentile clientela che questa è una RICHIESTA di prenotazione e che dovrà essere confermata da noi via mail o chiamata",
   "messaggio_chiusura": "Mercoledì è il nostro giorno di chiusura, perfavore scegli un altro giorno per la tua prenotazione",
   "messaggio_chiusura_ferie": "Ci scusiamo per il disagio, ma il ristorante è chiuso per ferie fino al 27 marzo",
-  "messaggio_chiusura_ferie2": "Ci scusiamo per il disagio, ma il ristorante è chiuso per ferie dal 14 ottobre"
+  "messaggio_chiusura_ferie2": "Ci scusiamo per il disagio, ma il ristorante è chiuso per ferie dal 14 ottobre",
+  "seleziona_orario": "Seleziona un orario",
+  "prenotazione_inviata": "Richiesta di prenotazione inviata, per favore attendere conferma via email"
 }

@@ -34,7 +34,7 @@ const Reservation = () => {
   const form = useRef();
   const navigate = useNavigate();
 
-  const { nome, cognome, guest, number, date, email } = formData;
+  const { nome, cognome, guest, number, date, email, time } = formData;
 
   const isWednesday = (dateString) => {
     const selectedDate = new Date(dateString);
@@ -103,9 +103,7 @@ const Reservation = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     sendEmail();
-    toast.success(
-      "Richiesta andata a buon fine! Attendere nostra conferma grazie"
-    );
+    toast.success(t("prenotazione_inviata"));
     navigate("/");
   };
 
@@ -121,7 +119,7 @@ const Reservation = () => {
           <div className="w-full px-3 sm:w-1/2">
             <div className="mb-5">
               <label
-                for="nome"
+                htmlFor="nome"
                 className="mb-3 block text-base font-medium text-[#07074D]"
               >
                 {t("nome")}
@@ -130,7 +128,7 @@ const Reservation = () => {
                 type="text"
                 name="nome"
                 id="nome"
-                value={nome}
+                value={formData.nome}
                 onChange={onMutate}
                 placeholder={t("nome")}
                 className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
@@ -141,8 +139,8 @@ const Reservation = () => {
           <div className="w-full px-3 sm:w-1/2">
             <div className="mb-5">
               <label
-                for="cognome"
-                class="mb-3 block text-base font-medium text-[#07074D]"
+                htmlFor="cognome"
+                className="mb-3 block text-base font-medium text-[#07074D]"
               >
                 {t("cognome")}
               </label>
@@ -177,10 +175,10 @@ const Reservation = () => {
             required
           />
         </div>
-        <div class="mb-5">
+        <div className="mb-5">
           <label
-            for="number"
-            class="mb-3 block text-base font-medium text-[#07074D]"
+            htmlFor="number"
+            className="mb-3 block text-base font-medium text-[#07074D]"
           >
             {t("telefono")}
           </label>
@@ -195,10 +193,10 @@ const Reservation = () => {
             required
           />
         </div>
-        <div class="mb-5">
+        <div className="mb-5">
           <label
-            for="guest"
-            class="mb-3 block text-base font-medium text-[#07074D]"
+            htmlFor="guest"
+            className="mb-3 block text-base font-medium text-[#07074D]"
           >
             {t("persone")}
           </label>
@@ -215,11 +213,11 @@ const Reservation = () => {
           />
         </div>
 
-        <div class="-mx-3 flex flex-wrap">
-          <div class="w-full px-3 sm:w-1/2">
-            <div class="mb-5">
+        <div className="flex flex-wrap -mx-3">
+          <div className="w-full px-3 sm:w-1/2">
+            <div className="mb-5">
               <label
-                for="date"
+                htmlFor="date"
                 className="mb-3 block text-base font-medium text-[#07074D]"
               >
                 {t("data")}
@@ -236,22 +234,47 @@ const Reservation = () => {
               />
             </div>
           </div>
-          <div class="w-full px-3 sm:w-1/2">
-            <div class="mb-5">
+          <div className="w-full px-3 sm:w-1/2">
+            <div className="mb-5">
               <label
-                for="time"
-                class="mb-3 block text-base font-medium text-[#07074D]"
+                htmlFor="time"
+                className="mb-3 block text-base font-medium text-[#07074D]"
               >
                 {t("orario")}{" "}
               </label>
-              <input
-                type="time"
+              <select
                 name="time"
                 id="time"
                 onChange={onMutate}
+                value={time}
                 className="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md"
                 required
-              />
+              >
+                <option value="" disabled selected>
+                  {t("seleziona_orario")}
+                </option>
+                <option value="12:00">12:00</option>
+                <option value="12:15">12:15</option>
+                <option value="12:30">12:30</option>
+                <option value="12:45">12:45</option>
+                <option value="13:00">13:00</option>
+                <option value="13:15">13:15</option>
+                <option value="13:30">13:30</option>
+                <option value="13:45">13:45</option>
+                <option value="18:30">18:30</option>
+                <option value="18:45">18:45</option>
+                <option value="19:00">19:00</option>
+                <option value="19:15">19:15</option>
+                <option value="19:30">19:30</option>
+                <option value="19:45">19:45</option>
+                <option value="20:00">20:00</option>
+                <option value="20:15">20:15</option>
+                <option value="20:30">20:30</option>
+                <option value="20:45">20:45</option>
+                <option value="21:00">21:00</option>
+                <option value="21:15">21:15</option>
+                <option value="21:30">21:30</option>
+              </select>
             </div>
           </div>
         </div>

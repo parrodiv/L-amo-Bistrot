@@ -272,8 +272,6 @@ const Reservation = () => {
                 <option value="20:30">20:30</option>
                 <option value="20:45">20:45</option>
                 <option value="21:00">21:00</option>
-                <option value="21:15">21:15</option>
-                <option value="21:30">21:30</option>
               </select>
             </div>
           </div>
